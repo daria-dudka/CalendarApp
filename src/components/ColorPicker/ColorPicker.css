@@ -1,0 +1,23 @@
+.color-picker {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.color-box {
+  width: 54px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid rgba(49, 39, 37, 0.4);
+  cursor: pointer;
+}
+
+.color-box.selected {
+  border-radius: 6px;
+  border: 5px solid #101277;
+}
+
+.color-box:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,35 @@
+.btn {
+  padding: 13px 32px;
+  border-radius: 4px;
+  box-shadow: var(--boxShadow);
+  text-transform: capitalize;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.3s;
+  color: #ffffff;
+}
+
+.btn.add {
+  padding: 14px 36px;
+  background: var(--pinkGradient);
+}
+
+.btn.cancel {
+  background: var(--cancelBtnColor);
+}
+
+.btn.save {
+  background: var(--saveBtnColor);
+}
+
+.btn.remove {
+  background: var(--removeBtnColor);
+  margin-right: auto;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}

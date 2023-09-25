@@ -1,0 +1,133 @@
+.reminders-list {
+  list-style: none;
+  height: 100%;
+  margin-top: 32px;
+  padding-top: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 31px;
+  max-height: 507px;
+  overflow-y: auto;
+}
+
+.reminder-item {
+  position: relative;
+  max-width: 567px;
+  width: 100%;
+  min-height: 134px;
+  padding: 0px 12px 0px 34px;
+  border-radius: 16px;
+  box-shadow: -1px 3px 14px 2px #d1dcf0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reminder-line {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: calc(100% - 24px);
+  border-radius: 100px;
+}
+
+.reminder-edit {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--blueGradient);
+  bottom: 0;
+  right: -3px;
+  transform: translateY(50%);
+  cursor: pointer;
+}
+
+.reminder-edit:hover {
+  opacity: 0.8;
+}
+
+.reminder-edit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 18px;
+  width: 18px;
+  background-image: url('../../assets/edit.svg');
+}
+
+.reminder-info {
+  height: 100%;
+  padding: 12px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 4;
+}
+
+.reminder-title,
+.reminder-description,
+.reminder-time {
+  font-weight: 600;
+}
+
+.reminder-title,
+.reminder-time {
+  color: var(--reminderTextColor);
+}
+
+.reminder-title {
+  font-size: 14px;
+}
+
+.reminder-description {
+  color: var(--textColor);
+  font-size: 18px;
+}
+
+.reminder-time {
+  height: 100%;
+  padding: 46px 0px 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-size: 35px;
+  border-left: 1px solid #d1dcf0;
+}
+
+.reminder-time::before {
+  content: '';
+  position: absolute;
+  background-image: url('../../assets/clock.svg');
+  width: 34px;
+  height: 34px;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.no-reminders {
+  padding-top: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-reminders-img {
+  object-fit: cover;
+}
+
+.no-reminders-text {
+  color: var(--lightTextColor);
+  font-size: 21px;
+  font-weight: 600;
+}

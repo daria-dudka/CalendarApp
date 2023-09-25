@@ -1,0 +1,51 @@
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.day-of-week {
+  font-family: 'Lato', sans-serif;
+  padding: 2px 8px;
+  text-align: center;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+}
+
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.calendar-day.inactive {
+  cursor: not-allowed;
+}
+
+.calendar-day.today {
+  color: #ff465d;
+}
+
+.calendar-day.selected {
+  background: var(--pinkGradient);
+  color: #ffffff;
+}
+
+.calendar-day.hasReminders::before {
+  content: '';
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--pointColor);
+  border-radius: 50%;
+}

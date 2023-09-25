@@ -1,0 +1,48 @@
+.reminder-form,
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.form-input::placeholder {
+  color: rgba(56, 64, 66, 0.5);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form-input {
+  padding: 11px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(49, 39, 37, 0.4);
+  color: var(--textColor);
+  font-size: 18px;
+  font-weight: 400;
+  resize: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-input-wrapper {
+  flex: 1;
+}
+
+.form-btn-container {
+  padding-top: 90px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.form-btn-container::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 1px;
+  background: rgba(49, 39, 37, 0.2);
+}
