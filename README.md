@@ -2,6 +2,8 @@
 
 This is a demo calendar application using React and Redux for state management. It was bootstrapped with create-react-app.
 
+You can find the deployed application by going to this link https://calendar-app-peach.vercel.app/
+
 ## Features
 
 - Single month view of a calendar for the current month.
