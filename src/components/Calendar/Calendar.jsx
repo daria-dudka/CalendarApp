@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './Calendar.css';
-import {
-  addReminder,
-  editReminder,
-  deleteReminder,
-} from '../../store/actions';
-import {
-  getFilteredReminders,
-  getFullDateString,
-} from '../../utils/utils';
+import { addReminder, editReminder, deleteReminder } from '../../store/actions';
+import { getFilteredReminders, getFullDateString } from '../../utils/utils';
 import Button from '../Button/Button';
 import ReminderForm from '../ReminderForm/ReminderForm';
 import RemindersList from '../RemindersList/RemindersList';
@@ -24,10 +17,7 @@ const Calendar = () => {
 
   const dispatch = useDispatch();
   const reminders = useSelector((state) => state.reminders);
-  const filteredReminders = getFilteredReminders(
-    reminders,
-    selectedDate
-  );
+  const filteredReminders = getFilteredReminders(reminders, selectedDate);
 
   const handleNextMonth = () => {
     const nextMonth = new Date(currentMonth);
@@ -86,13 +76,8 @@ const Calendar = () => {
         ) : (
           <>
             <div className='reminders-header'>
-              <h1 className='title'>
-                {getFullDateString(selectedDate)}
-              </h1>
-              <Button
-                name='add'
-                onClick={() => setIsFormVisible(true)}
-              >
+              <h1 className='title'>{getFullDateString(selectedDate)}</h1>
+              <Button name='add' onClick={() => setIsFormVisible(true)}>
                 Add Reminder
               </Button>
             </div>
@@ -115,9 +100,7 @@ const Calendar = () => {
           selectedDate={selectedDate}
           onDayClick={handleDayClick}
         />
-        <p className='calendar-footer'>
-          © 2023 Codelitt Inc All rights reserved
-        </p>
+        <p className='calendar-footer'>© 2024 All rights reserved</p>
       </div>
     </div>
   );
